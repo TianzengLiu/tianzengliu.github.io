@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="pea.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <title>Punnett Square</title>
+</head>
+<body>
+<!-- Header -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#" style="color:white; font-size: 28px">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active slash">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:white">Mendelian Inheritance</a>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br/><br/><br/><br/>
+
+ <!-- Punnett Square -->      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 model">
+            <div clsss="title"><p clsss="title" style="color:white">Select two pea plant genotypes to cross.</p></div>
+              <br/><br/><br/><br/>
+              <div class="row">
+                <div class="col-3">
+                  <br/> <br/> <br/><br/>
+                  <div class="square-left1">YY</div><br/>
+                  <div class="square-left2">Yy</div><br/>
+                  <div class="square-left3">yy</div><br/>
+                </div>
+
+                <div class="col-2 Yy-left">
+                <br/><br/><br/><br/><br/>
+                  <div class="left-Y"> </div>
+                  <br/><br/>
+                  <div class="left-y"> </div> 
+                </div>
+              
+                <div class="col-8">
+                  <div class="row">  
+                    <div class="square-top1">YY</div>
+                    <div class="square-top2">Yy</div>
+                    <div class="square-top3">yy</div>
+                  </div>
+                  <br/><br/>
+                  <div class="row">
+                    <div class="top-Y"> </div>
+                    <div class="top-y"> </div>
+                  </div>
+                  <br/><br/>
+
+                  <div class="row">
+                    <div class="row square-result"  >
+                      <div class="col " id = "s1"><span class="box1"></span ><span class="box11"></span> </div>
+                      <div class="col " id = "s2"><span class="box2"></span ><span class="box22"></span></div>
+                      <div class="w-100"></div>
+                      <div class="col " id = "s3"><span class="box3"></span ><span class="box33"></span></div>
+                      <div class="col " id = "s4"><span class="box4"></span ><span class="box44"></span></div>
+                    </div>       
+                  </div>    
+                </div>
+              </div>
+             </div>
+
+            <div class="col-md-4 model">
+              <p style="color:white; font-size: 20px; font-weight: 400;">PHENOTYPIC RATIO</p>
+              <div class="chart"></div>
+              <br/><br/>
+              <p style="color:white; font-size: 20px; font-weight: 400;">GENOTYPIC RATIO</p>  
+              <p style="color:dimgray">1 YY : 2 Yy : 1 yy</p>
+            </div>
+          </div>
+        </div>
+        <br/><br/><br/>
+ 
+<!-- Javascript Punnett Square--> 
+<script type="text/javascript">
+  $(document).ready(function(){
+  let Y;
+  let y;
+
+    $( ".square-top2" ).click(function(e) {
+      //console.log(e.target.innerHTML.split(""))
+      const innertext = e.target.innerText.trim();
+      const text = innertext.split("");
+      $( ".top-Y" ).text(text[0]);
+      $( ".top-y" ).text(text[1]);
+      $( ".box1" ).text(text[0]);
+      $( ".box2" ).text(text[1]);
+      $( ".box3" ).text(text[0]);
+      $( ".box4" ).text(text[1]);
+    });
+
+
+    $( ".square-top3" ).click(function(e) {
+      const innertext = e.target.innerText.trim();
+      const text = innertext.split("");
+      $( ".top-Y" ).text(text[0]);
+      $( ".top-y" ).text(text[1]);
+      $( ".box1" ).text(text[0]);
+      $( ".box2" ).text(text[1]);
+      $( ".box3" ).text(text[0]);
+      $( ".box4" ).text(text[1]);
+    });
+
+    $( ".square-top1" ).click(function(e) {
+      const innertext = e.target.innerText.trim();
+      const text = innertext.split("");
+      $( ".top-Y" ).text(text[0]);
+      $( ".top-y" ).text(text[1]);
+      $( ".box1" ).text(text[0]);
+      $( ".box2" ).text(text[1]);
+      $( ".box3" ).text(text[0]);
+      $( ".box4" ).text(text[1]);
+    });
+
+    $( ".square-left3" ).click(function(e) {
+      const innertext = e.target.innerText.trim();
+      const text = innertext.split("");
+      $( ".left-Y" ).text(text[0]);
+      $( ".left-y" ).text(text[1]);  
+      $( ".box11" ).text(text[0]);
+      $( ".box22" ).text(text[0]);
+      $( ".box33" ).text(text[1]);
+      $( ".box44" ).text(text[1]); 
+    });
+
+    $( ".square-left2" ).click(function(e) {
+      const innertext = e.target.innerText.trim();
+      const text = innertext.split("");
+      $( ".left-Y" ).text(text[0]);
+      $( ".left-y" ).text(text[1]);
+      $( ".box11" ).text(text[0]);
+      $( ".box22" ).text(text[0]);
+      $( ".box33" ).text(text[1]);
+      $( ".box44" ).text(text[1]);
+    });
+
+    $( ".square-left1" ).click(function(e) {
+      const innertext = e.target.innerText.trim();
+      const text = innertext.split("");
+      $( ".left-Y" ).text(text[0]);
+      $( ".left-y" ).text(text[1]);
+      $( ".box11" ).text(text[0]);
+      $( ".box22" ).text(text[0]);
+      $( ".box33" ).text(text[1]);
+      $( ".box44" ).text(text[1]);  
+    });
+  });
+
+</script>
+
+
+<!-- D3.js Chart--> 
+<script>
+  var data = [0, 150, 50, 0, 200];
+  var margin = {
+    top: 30,
+    right: 40,
+    bottom: 30,
+    left: 45
+  }
+  var height = 200;
+  var width = 200;
+  var barWidth = 40;
+  var barOffset = 1.5;
+
+  d3.select(".chart").append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g')
+    .attr('transform', 'translate(' + margin.left+',' + margin.top+')')
+    .style('background', 'white')
+      .selectAll("rect")
+      .data(data)
+        .enter().append('rect')
+        .style('fill', 'yellow')
+        .attr('width', barWidth)
+        .attr('height', function(d) {
+          return d;
+          })
+        .attr('x', function (d, i){
+          return i * (barWidth * barOffset); })
+        .attr('y', function(d) {
+          return height - d;
+          })
+
+        var vScale = d3.scale.linear()
+          .domain([0, d3.max(data)])
+          .range([height, 0])
+
+        var hScale = d3.scale.ordinal()
+          .domain(d3.range(0, data.length))
+          .rangeBands([0, width])
+
+// V axis
+
+        var vAxis = d3.svg.axis()
+          .scale(vScale)
+          .orient('left')
+          .ticks(5)
+          .tickPadding(5)
+
+// V guide
+
+        var vGuide = d3.select('svg')
+          .append('g')
+          vAxis(vGuide)
+          vGuide.attr('transform', 'translate('+ margin.left + ',' + margin.top + ')')
+          vGuide.selectAll('path')
+            .style('fill', 'none')
+            .style('stroke', '#000')
+            vGuide.selectAll('line')
+            .style('stroke', 'dimgray')
+
+// H axis
+
+        var hAxis = d3.svg.axis()
+          .scale(hScale)
+          .orient('bottom')
+          .tickValues(hScale.domain().filter(function(d, i) {
+            return !(i % (data.length/10));
+          }));
+
+// H guide
+
+        var hGuide = d3.select('svg')
+          .append('g')
+          hAxis(hGuide)
+          hGuide.attr('transform', 'translate('+ margin.left + ',' + (height + margin.top) + ')' )
+          hGuide.selectAll('path')
+            .style('fill', 'none')
+            .style('stroke', '#000')
+          hGuide.selectAll('line')
+            .style('stroke', 'dimgray')
+    
+</script>
+
+ 
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

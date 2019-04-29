@@ -1,0 +1,266 @@
+body {
+    background-color: lightgray;
+}
+
+p {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 10%;
+}
+
+.box1 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;   
+    color:dimgray;    
+}
+
+.box11 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;  
+    color:dimgray;     
+}
+
+.box2 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;  
+    color:dimgray;     
+}
+
+.box22 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;  
+    color:dimgray;     
+}
+
+.box3 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;    
+    color:dimgray;   
+}
+
+.box33 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;    
+    color:dimgray;   
+}
+
+.box4 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;   
+    color:dimgray;    
+}
+
+.box44 {
+    font-family: Sans-serif;
+    font-weight: 400;
+    font-size: 30px;    
+    color:dimgray;   
+}
+
+.col {
+    width: 50px;
+    height: 80px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Sans-serif;
+    float: left;
+    background-color: white;
+} 
+
+#s1 {
+    border: 1px solid lightgray;
+}
+
+#s2 {
+    border: 1px solid lightgray;
+}
+
+#s3 {
+    border: 1px solid lightgray;
+}
+
+#s4 {
+    border: 1px solid lightgray;
+}
+
+.square-result {
+    margin-left: 10px;
+}
+
+.square-left1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: Sans-serif;
+    background-color:whitesmoke;
+    color:dimgray;
+    text-align: center;
+} 
+
+.square-left1:hover {
+    background-color: white;
+    border: 3px solid darkorange;    
+}
+
+.square-left2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: Sans-serif;
+    background-color:whitesmoke;
+    color:dimgray;
+    text-align: center;
+} 
+
+.square-left2:hover {
+    background-color: white;
+    border: 3px solid darkorange;
+}
+
+.square-left3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: Sans-serif;
+    background-color:whitesmoke;
+    color:dimgray;
+    text-align: center;
+} 
+
+.square-left3:hover {
+    background-color: white;
+    border: 3px solid darkorange;       
+}
+
+.square-top1 {
+    width: 50px;
+    height: 50px;
+    margin-right: 5%;
+    margin-top: -10%;
+    border-radius: 7px;
+    font-size: 25px;
+    font-family: Sans-serif;
+    float: left;
+    background-color:whitesmoke;
+    color:dimgray;
+    text-align: center; 
+} 
+
+.square-top1:hover {
+   background-color: white;
+   border: 3px solid darkorange;   
+}
+
+.square-top2 {
+    width: 50px;
+    height: 50px;
+    margin-right: 5%;
+    margin-top: -10%;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: Sans-serif;
+    float: left;
+    background-color:whitesmoke;
+    color:dimgray;
+    text-align: center;
+} 
+
+.square-top2:hover {
+    background-color: white;
+    border: 3px solid darkorange;  
+}
+
+.square-top3 {
+    width: 50px;
+    height: 50px;
+    margin-right: 5%;
+    margin-top: -10%;
+    border-radius: 5px;
+    font-size: 25px;
+    font-family: Sans-serif;
+    float: left;
+    background-color:whitesmoke;
+    color:dimgray;
+    text-align: center;
+} 
+
+.square-top3:hover {
+    background-color: white;
+    border: 3px solid darkorange;
+}
+
+.top-row1 {
+    margin-top: 50px;
+}
+
+.Yy-left {
+    margin-left: -10%;
+}
+
+ul .slash {
+    border-left: 2px solid white;
+}
+
+.top-Y {
+    float: left;
+    margin-left: 10%;
+    font-size: 30px;
+    color:dimgray;
+}
+
+.top-y {
+    float: left;
+    margin-left: 20%;
+    font-size: 30px;
+    color:dimgray;
+}
+
+.Yy-left {
+    margin-top: 1%;
+}
+
+.left-Y {
+    font-size: 30px;
+    color:dimgray;
+}
+
+.left-y {
+    font-size: 30px;
+    color:dimgray;
+}
+
+@media screen and (max-width: 800px) {
+    .model {
+      width: 100%;
+      display: block;
+      margin-bottom: 25%;
+    }
+
+    .Yy-left {
+        margin-top: 8%;
+    }
+    
+  }
+  @media screen and (max-width: 990px) {
+    .model {
+      width: 100%;
+      display: block;
+      margin-bottom: 25%;
+    }
+
+    .Yy-left {
+        margin-top: 8%;
+    }
+    
+  }
